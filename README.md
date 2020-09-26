@@ -5,13 +5,13 @@ freeg is simple script to scrape limited free games.
 Currently only able to scrape website https://isthereanydeal.com/specials/.
 
 # Installation
----
+
 ```sh
 $ pip install freeg
 ```
 
 # Usage
----
+
 #### **From console**
 
 ##### Basic
@@ -74,7 +74,7 @@ games = scraper.extract()
 ```
 
 # Notes
----
+
 - Currently only able to scrape website https://isthereanydeal.com/specials/.
 - Some games may have wrong information *(ex: already free forever, region locked on specific store)*
 
