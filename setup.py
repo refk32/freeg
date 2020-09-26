@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="freeg",
-    version="0.1",
+    version="0.1.1",
     author="refk32",
     author_email="refk32@gmail.com",
     description="Scrape limited free games",
@@ -17,7 +17,8 @@ setuptools.setup(
           'requests',
           'beautifulsoup4',
           'tldextract',
-          'colorama'
+          'colorama',
+          'lxml'
         ],
     entry_points={
         "console_scripts" : [
