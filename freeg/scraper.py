@@ -1,6 +1,7 @@
-import requests
-from bs4 import BeautifulSoup
 import json
+
+from bs4 import BeautifulSoup
+import requests
 import tldextract
 
 def extract():
@@ -32,10 +33,10 @@ def extract():
                 continue # search only for limited time free games       
 
             title = str(bundle_title.text).split("-")[0].strip() # extract the game title from whitespaces
-            link = bundle_title.find("a", attrs={"href" : True})["href"]
-            store = tldextract.extract(link).registered_domain
+            url = bundle_title.find("a", attrs={"href" : True})["href"]
+            store = tldextract.extract(url).registered_domain
    
-            freegames.append({"title" : title, "link" : link, "store" : store,"time_left" : time_left})
+            freegames.append({"title" : title, "url" : url, "store" : store,"time_left" : time_left})
     
     return freegames
 
